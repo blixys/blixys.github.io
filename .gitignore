@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Editor swap files
+*.swp
+
+# Node (if using tooling)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
