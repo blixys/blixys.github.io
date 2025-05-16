@@ -1,6 +1,8 @@
 body {
   background-color: #DDDDDD;
   font-family: "Inter", sans-serif;
+  font-size: 12pt;
+  line-height: 1.333;
 }
 
 @font-face {
@@ -16,6 +18,7 @@ div.site {
   max-width: 672px;
   margin: auto;
   margin-top: 50px;
+  size: 16pt;
 }
 
 a {
