@@ -1,0 +1,23 @@
+body {
+  background-color: #DDDDDD;
+  font-family: "Inter";
+}
+
+@font-face {
+    font-family: 'interregular';
+    src: url('inter-regular-webfont.woff2') format('woff2'),
+         url('inter-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div.site {
+  max-width: 672px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+a {
+  color: #6BAFC3;
+}
