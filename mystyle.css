@@ -24,3 +24,7 @@ div.site {
 a {
   color: #6BAFC3;
 }
+
+a:hover {
+  text-decoration: underline;
+}
