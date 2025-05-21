@@ -2,7 +2,7 @@ body {
   background-color: #DDDDDD;
   font-family: "Helvetica Neue", "Inter", sans-serif;
   font-size: 12pt;
-  line-height: 1.333;
+  line-height: 1.4;
 }
 
 @font-face {
@@ -15,9 +15,10 @@ body {
 }
 
 div.site {
-  max-width: 672px;
+  max-width: 727px;
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   size: 16pt;
 }
 
