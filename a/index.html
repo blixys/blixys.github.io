@@ -26,8 +26,10 @@
     />
     <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
     <a href="../a" style="text-decoration:none; color: black;"><p style="text-align: left; font-size: 48pt; margin: 0;">artwork</p></a>
-    <img src="../images/artwork.png" alt="writing icon">
+    <img id="artworkIcon" src="../images/artwork.png" alt="artwork icon" style="cursor: pointer;">
     </div>
+    <audio id="clickSound" src="../sounds/artwork.wav" preload="auto"></audio>
+    <img src="RANDOMIMAGEHERE" alt="">
     <br>
     <footer>
       <p>
@@ -38,5 +40,14 @@
       </p>
     </footer>
   </div>
+    <script>
+    const artworkIcon = document.getElementById("artworkIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    artworkIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
 </body>
 </html>

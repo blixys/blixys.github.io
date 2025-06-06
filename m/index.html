@@ -13,6 +13,9 @@
       font-size: 10pt;
       color: #808080;
     }
+      #mappingIcon {
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
@@ -26,8 +29,9 @@
     />
     <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
     <a href="../m" style="text-decoration:none; color: black;"><p style="text-align: left; font-size: 48pt; margin: 0;">mapping</p></a>
-    <img src="../images/mapping.png" alt="mapping icon">
+    <img id="mappingIcon" src="../images/mapping.png" alt="mapping icon" style="cursor: pointer;">
     </div>
+    <audio id="clickSound" src="../sounds/mapping.wav" preload="auto"></audio>
     <br>
     <footer>
       <p>
@@ -38,5 +42,14 @@
       </p>
     </footer>
   </div>
+  <script>
+    const mappingIcon = document.getElementById("mappingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    mappingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
 </body>
 </html>

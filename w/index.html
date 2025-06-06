@@ -26,10 +26,11 @@
     />
     <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
     <a href="../w" style="text-decoration:none; color: black;"><p style="text-align: left; font-size: 48pt; margin: 0;">writing</p></a>
-    <img src="../images/writing.png" alt="writing icon">
+      <img id="writingIcon" src="../images/writing.png" alt="writing icon" style="cursor: pointer;">
     </div>
+	 <audio id="clickSound" src="../sounds/writing.wav" preload="auto"></audio>
 <br>
-Music Reviews
+Reviews
 <hr style="margin-top: 0.4em; margin-bottom: 0.4em; border: none; border-top: 2px solid black;" />
 <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
     <p style="color: #808080; margin: 0;">2025.05.20</p>
@@ -58,6 +59,36 @@ Archival
         <a href="where-ive-been\" style="text-decoration:none; color: black;">where i've been</a>
     </p>
 </div>
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style="color: #808080; margin: 0;">2023.05.19</p>
+    <p style="text-align: right; margin: 0;">
+        <a href="when-will-i-have-it-i-wonder\" style="text-decoration:none; color: black;">when will I have it I wonder</a>
+    </p>
+</div>
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style="color: #808080; margin: 0;">2022.03.09</p>
+    <p style="text-align: right; margin: 0;">
+        <a href="untitled-200\" style="text-decoration:none; color: black;">Untitled (200)</a>
+    </p>
+</div>
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style="color: #808080; margin: 0;">2022.02.14</p>
+    <p style="text-align: right; margin: 0;">
+        <a href="untitled-usb-ports\" style="text-decoration:none; color: black;">Untitled (usb ports)</a>
+    </p>
+</div>
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style="color: #808080; margin: 0;">2022.01.23</p>
+    <p style="text-align: right; margin: 0;">
+        <a href="untitled-concrete-walls\" style="text-decoration:none; color: black;">Untitled (concrete walls)</a>
+    </p>
+</div>
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style="color: #808080; margin: 0;">2021.10.25</p>
+    <p style="text-align: right; margin: 0;">
+        <a href="untitled-the-blue\" style="text-decoration:none; color: black;">Untitled (the blue)</a>
+    </p>
+</div>
     <br>
     <footer>
       <p>
@@ -68,5 +99,14 @@ Archival
       </p>
     </footer>
   </div>
+    <script>
+    const writingIcon = document.getElementById("writingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    writingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
 </body>
 </html>
