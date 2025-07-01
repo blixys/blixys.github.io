@@ -29,3 +29,18 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+     
+      color: black;
+    }

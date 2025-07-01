@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blixys</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+  <link rel="stylesheet" href="../../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="writingIcon" src="../../images/writing.png" alt="writing icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../../sounds/writing.wav" preload="auto"></audio></li>
+    <li><a href="" style="text-decoration:none; color: #888"><p>writing</p></a></li>
+    <li><a href="../../mapping" style="text-decoration:none; color: black"><p>mapping</p></a></li>
+    <li><a href="../../artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+    <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style=" text-align: left; font-size: 24pt; font-weight: bold; margin-top: 1em; margin-bottom: 0em;">boris - flood</p>
+    <p style=" text-align: right; font-size: 24pt; font-weight: bold; margin-top: 1em; margin-bottom: 0em;">10</p>
+    </div>
+    <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+        <p style="color: #808080; margin: 0;">nature always wins | 2022.12.13</p>
+        <p style="text-align: right; margin: 0;"><a href="../../writing/" style="text-decoration:none; color: #808080"><i>go back</i></a></p>
+    </div>
+    <p style="text-align: justify;"><img src="../../images/flood.jpg" alt="flood album cover" style="float: left; margin: 0 20px 0px 0; width: 225px;">
+    <hr style="margin-top: 0.8em; margin-bottom: 0.5em; border: none; border-top: 2px solid black;" /></p>
+    <p style="text-align: justify; color: #808080;">author's note 2025.05.17: i still stand by my rating, but if i were to re-review this i wouldn't use the same Sendai metaphor. quite interesting to see how much i've changed as a person though!</p>
+    <p style="text-align: justify;">if you look around for long enough, out there on Wikipedia is a photo of a US Navy helicopter flying through Sendai, following the aftermath of the 2011 Great East Japan Earthquake. look long and hard at it. notice how the water just drowns whole neighborhoods, leaving no seal or crack undrowned, with gravity having no mercy to anyone who just so happened to be beneath the waves. the black and sickened smoke trails signifying that something has gone horribly, horribly wrong. the vantage point painting houses and neighborhoods as tiny, destructible things.</p>
+    <p style="text-align: justify;">in the same way this photo is a harrowing reminder of our fragility, this album has the same message. the lingering riffs and slow, dreading depth of this album puts you in the shoes of a human who, for the first time, truly realizes the frailty of the life it always knew. the sheer length of this album, the way the first part drones on and on, serves to cement the feeling of scale. it's the feeling of being small, standing right before a gargantuan world larger than any life there is.</p>
+    <p style="text-align: justify;">undoubtedly however, this album's true highlight is the third part. flood part 3 is the culmination of the dread, anxiety, and listlessness that part 1 and 2 cultivate over the course of 30 minutes. it is the shadow of the waves slowly consuming any light within its way, followed by the waves crashing and decimating the ground beneath, portrayed by a wall of sound that is as awe-inspiring as it is soul crushingly humbling. this wall continues to come crashing down repeatedly over the remaining 11 minutes of the track, with a musical passage that assaults and crushes the listener again, again, again, and again.</p>
+    <p style="text-align: justify;">by part 4, things have ultimately been submerged, drowned and consumed by the waters in the same way Sendai was, leaving no seal or crack undrowned, and that without mercy. slowly, things die as the album fades out into silence. the sound of helicopters and rescue fill the final 10 minutes of this album.</p>
+    <p style="text-align: justify;">remember how small we are.</p>
+    <p style="text-align: justify; color: #808080">FAV TRACKS: <i>ALL</i> <br>LEAST FAV TRACKS: N/A</p>
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        <em>flood</em> (© 2000 Boris).  
+    Used under Fair Use for criticism and review.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.
+      </p>
+    </footer>
+  </div>
+    <script>
+    const writingIcon = document.getElementById("writingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    writingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>

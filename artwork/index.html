@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blixys</title>
+  <script src="img.js"></script>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="artworkIcon" src="../images/artwork.png" alt="artwork icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../sounds/writing.wav" preload="auto"></audio></li>
+    <li><a href="../writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+    <li><a href="../mapping" style="text-decoration:none; color: black"><p>mapping</p></a></li>
+    <li><a href="" style="text-decoration:none; color: #888"><p>artwork</p></a></li>
+  </ul>
+    <img id="epic" src="" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); margin-top: 1em; margin-bottom: 1.5em;" class="center">
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.
+      </p>
+    </footer>
+  </div>
+    <script>
+    const artworkIcon = document.getElementById("artworkIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    artworkIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>

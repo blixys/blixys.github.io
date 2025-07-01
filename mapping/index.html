@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blixys</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+      #mappingIcon {
+    cursor: pointer;
+  }
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 12px;
+}
+.map-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.map-image {
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.map-label {
+  font-weight: bold;
+  margin: 8px 0 2px;
+}
+.map-date {
+  font-size: 0.8em;
+  color: #666;
+  margin: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <ul class="navbar">
+    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="mappingIcon" src="../images/mapping.png" alt="mapping icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../sounds/mapping.wav" preload="auto"></audio></li>
+    <li><a href="../writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+    <li><a href="" style="text-decoration:none; color: #888"><p>mapping</p></a></li>
+    <li><a href="../artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+    <br>
+    <div class="map-grid">
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2396018#osu/5190641">
+      <img src="https://assets.ppy.sh/beatmaps/2396018/covers/cover@2x.jpg" alt="Lifelike" class="map-image" />
+    </a>
+    <p class="map-label">Ichiko Aoba - Utanokehai</p>
+    <p class="map-date">Mapped 30 June 2025</p>
+  </div>
+  
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2301832#osu/4919466">
+      <img src="https://assets.ppy.sh/beatmaps/2301832/covers/cover@2x.jpg" alt="Lifelike" class="map-image" />
+    </a>
+    <p class="map-label">Porter Robinson - Lifelike</p>
+    <p class="map-date">Mapped 31 Dec 2024</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1552776#osu/4471357">
+      <img src="https://assets.ppy.sh/beatmaps/2126973/covers/cover@2x.jpg" alt="Kirei na Sankaku, Asahi Ningen" class="map-image" />
+    </a>
+    <p class="map-label">Camellia - Routing <span style="color: #808080; font-weight: normal;">GD</span></p>
+    <p class="map-date">Mapped 28 Jan 2024 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2108761#osu/4426100">
+      <img src="https://assets.ppy.sh/beatmaps/2108761/covers/cover@2x.jpg" alt="Kirei na Sankaku, Asahi Ningen" class="map-image" />
+    </a>
+    <p class="map-label">JYOCHO - Kirei na Sankaku, Asahi Ningen</p>
+    <p class="map-date">Mapped 24 Dec 2023 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2039452#osu/4254108">
+      <img src="https://assets.ppy.sh/beatmaps/2039452/covers/cover@2x.jpg" alt="Akuma No Uta" class="map-image" />
+    </a>
+    <p class="map-label">Boris - Akuma No Uta</p>
+    <p class="map-date">Mapped 05 Aug 2023</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1959500#osu/4060352">
+      <img src="https://assets.ppy.sh/beatmaps/1959500/covers/cover@2x.jpg" alt="Bad Apple!!" class="map-image" />
+    </a>
+    <p class="map-label">Masayoshi Minoshima - Bad Apple!!</p>
+    <p class="map-date">Mapped 19 Mar 2023</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1872058#osu/3851855">
+      <img src="https://assets.ppy.sh/beatmaps/1872058/covers/cover@2x.jpg" alt="Intrjctn + NeKoMaJiN Vs" class="map-image" />
+    </a>
+    <p class="map-label">NUITO - Intrjctn + NeKoMaJiN Vs</p>
+    <p class="map-date">Mapped 05 Mar 2023 with wyit <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1741078#osu/3559329">
+      <img src="https://assets.ppy.sh/beatmaps/1741078/covers/cover@2x.jpg" alt="See You Again" class="map-image" />
+    </a>
+    <p class="map-label">Tyler, The Creator - See You Again</p>
+    <p class="map-date">Mapped 12 Apr 2022</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1708862#osu/3491840">
+      <img src="https://assets.ppy.sh/beatmaps/1708862/covers/cover@2x.jpg" alt="CAN'T GET OVER YOU" class="map-image" />
+    </a>
+    <p class="map-label">Joji - CAN'T GET OVER YOU</p>
+    <p class="map-date">Mapped 27 Feb 2022</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1594233">
+      <img src="https://assets.ppy.sh/beatmaps/1594233/covers/cover@2x.jpg" alt="see you later" class="map-image" />
+    </a>
+    <p class="map-label">mayoi namekuji - see you later</p>
+    <p class="map-date">Mapped 04 Oct 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1581564">
+      <img src="https://assets.ppy.sh/beatmaps/1581564/covers/cover@2x.jpg" alt="theyaremanycolors" class="map-image" />
+    </a>
+    <p class="map-label">Frums - <span style="color:red">they</span><span style="color:green">are</span><span style="color:blue">many</span>colors</p>
+    <p class="map-date">Mapped 19 Sep 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1563061">
+      <img src="https://assets.ppy.sh/beatmaps/1563061/covers/cover@2x.jpg" alt="A BOY IS A GUN*" class="map-image" />
+    </a>
+    <p class="map-label">Tyler, The Creator - A BOY IS A GUN*</p>
+    <p class="map-date">Mapped 28 Aug 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1475493">
+      <img src="https://assets.ppy.sh/beatmaps/1475493/covers/cover@2x.jpg" alt="bloom." class="map-image" />
+    </a>
+    <p class="map-label">j^p^n - bloom.</p>
+    <p class="map-date">Mapped 27 May 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1377304">
+      <img src="https://assets.ppy.sh/beatmaps/1377304/covers/cover@2x.jpg" alt="MAKE IT FUNKY NOW" class="map-image" />
+    </a>
+    <p class="map-label">DOT96 - MAKE IT FUNKY NOW (BMS EDIT)</p>
+    <p class="map-date">Mapped 16 Feb 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1360992#osu/2816117">
+      <img src="https://assets.ppy.sh/beatmaps/1360992/covers/cover@2x.jpg" alt="Black Lotus" class="map-image" />
+    </a>
+    <p class="map-label">wa. - Black Lotus</p>
+    <p class="map-date">Mapped 29 Jan 2021 <img src="../images/loved.svg" style="width: 11px; margin-left: 5px;" alt="Loved"></p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1340364#osu/2776745">
+      <img src="https://assets.ppy.sh/beatmaps/1340364/covers/cover@2x.jpg" alt="datamatics prototype-ver.2.0" class="map-image" />
+    </a>
+    <p class="map-label">池田 亮司 - datamatics prototype-ver.2.0</p>
+    <p class="map-date">Mapped 04 Jan 2021</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1332376#osu/2760563">
+      <img src="https://assets.ppy.sh/beatmaps/1332376/covers/cover@2x.jpg" alt="踊る水飛沫" class="map-image" />
+    </a>
+    <p class="map-label">あきやま うに - 踊る水飛沫</p>
+    <p class="map-date">Mapped 25 Dec 2020</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1289203#osu/2676292">
+      <img src="https://assets.ppy.sh/beatmaps/1289203/covers/cover@2x.jpg" alt="Let Mom Sleep" class="map-image" />
+    </a>
+    <p class="map-label">長沼 英樹 - Let Mom Sleep</p>
+    <p class="map-date">Mapped 29 Oct 2020</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1210540#osu/2520130">
+      <img src="https://assets.ppy.sh/beatmaps/1210540/covers/cover@2x.jpg" alt="asura" class="map-image" />
+    </a>
+    <p class="map-label">Co shu Nie - asura</p>
+    <p class="map-date">Mapped 09 Jul 2020</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1063080#osu/2456973">
+      <img src="https://assets.ppy.sh/beatmaps/1063080/covers/cover@2x.jpg" alt="asura" class="map-image" />
+    </a>
+    <p class="map-label">Ohta Asuka (...) - Coconut Mall <span style="color: #808080; font-weight: normal;">GD</span></p>
+    <p class="map-date">Mapped 14 May 2020 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1169150#osu/2439133">
+      <img src="https://assets.ppy.sh/beatmaps/1169150/covers/cover@2x.jpg" alt="asura" class="map-image" />
+    </a>
+    <p class="map-label">Shawn Wasabi - Burnt Rice</p>
+    <p class="map-date">Mapped 11 May 2020</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1144528#osu/2459903">
+      <img src="https://assets.ppy.sh/beatmaps/1144528/covers/cover@2x.jpg" alt="asura" class="map-image" />
+    </a>
+    <p class="map-label">John Wasson - Caravan</p>
+    <p class="map-date">Mapped circa May 2020*</p>
+  </div>
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1147423#osu/2395940">
+      <img src="https://assets.ppy.sh/beatmaps/1147423/covers/cover@2x.jpg" alt="asura" class="map-image" />
+    </a>
+    <p class="map-label">isqa - //////////////sleepparalysis</p>
+    <p class="map-date">Mapped 13 Apr 2020</p>
+  </div>
+
+</div>
+<a href="slider/"><img src="../images/slider3.png" alt="osu! slider" style="width: 50%; margin-top: 5em; margin-bottom: 5em;" class="center"></a>
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.<br />
+        *Caravan was initially uploaded before it was completed.
+      </p>
+    </footer>
+  </div>
+  <script>
+    const mappingIcon = document.getElementById("mappingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    mappingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
