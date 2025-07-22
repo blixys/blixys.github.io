@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blixys</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    #yearProgressContainer {
+      margin: 1em auto;
+      text-align: center;
+      font-family: monospace;
+      color: #808080;
+    }
+
+    #yearProgressBox {
+      width: 100%;
+      height: 24px;
+      background-color: #ddd;
+      border: 1px solid #aaa;
+      border-radius: 0px;
+      overflow: hidden;
+    }
+
+    #yearProgressBar {
+      height: 100%;
+      width: 0%;
+      background-color: #4caf50;
+      transition: width 1s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+    <li><p style="text-decoration:none; color: black; font-weight: bold;">今日あって明日ない身。</p></a></li>
+  </ul>
+    <br>
+    <br>
+    <br>
+<div id="yearProgressContainer">
+  <div id="yearProgressBox">
+    <div id="yearProgressBar"></div>
+  </div>
+  <p id="yearProgressText"></p>
+</div>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.
+      </p>
+    </footer>
+  </div>
+    <script>
+    function updateYearProgress() {
+      const now = new Date();
+      const startOfYear = new Date(now.getFullYear(), 0, 1);
+      const endOfYear = new Date(now.getFullYear() + 1, 0, 1);
+      const progress = ((now - startOfYear) / (endOfYear - startOfYear)) * 100;
+
+      const progressBar = document.getElementById("yearProgressBar");
+      const progressText = document.getElementById("yearProgressText");
+
+      const preciseProgress = progress.toFixed(8);
+      progressBar.style.width = preciseProgress + "%";
+      progressText.textContent = preciseProgress + "%";
+    }
+    setInterval(updateYearProgress, 1);
+    updateYearProgress();
+    </script>
+</body>
+</html>

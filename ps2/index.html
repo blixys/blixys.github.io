@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blixys</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+    <li><a href="../writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+    <li><a href="../mapping" style="text-decoration:none; color: black"><p>mapping</p></a></li>
+    <li><a href="../artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+  <br>
+   <iframe width="100%" height="409"
+     src="https://www.youtube.com/embed/LJUjAmahb_Q?autoplay=1&mute=1">
+     </iframe> 
+<a href="https://drive.usercontent.google.com/download?id=1OPpD61nhRblzdFHB1Y_j7ZeofOX3qCGM&export=download&authuser=0"><p style="font-weight: bold; font-size: 20pt;">download here</p></a>
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.
+      </p>
+    </footer>
+  </div>
+    <script>
+    const writingIcon = document.getElementById("writingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    writingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
