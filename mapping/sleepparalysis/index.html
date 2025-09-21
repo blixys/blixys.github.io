@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sleepparalysis - blixys</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="../../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+      #mappingIcon {
+    cursor: pointer;
+  }
+.map-grid {
+  gap: 0px;
+  width: 100%;
+  margin-top: 0px;
+}
+.map-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.map-image {
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.map-label {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 12px 0 2px;
+}
+.map-date {
+  font-size: 1.2em;
+  color: #666;
+  margin: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <ul class="navbar">
+    <li><a href="https://blixys.com/"><img src="../../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="mappingIcon" src="../../images/mapping.png" alt="mapping icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../../sounds/mapping.wav" preload="auto"></audio></li>
+    <li><a href="../../writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+    <li><a href="https://blixys.com/mapping" style="text-decoration:none; color: #888"><p>mapping</p></a></li>
+    <li><a href="../../artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+    <br>
+    <div class="map-grid">
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/1147423#osu/2395940">
+      <img src="https://assets.ppy.sh/beatmaps/1147423/covers/cover@2x.jpg" alt="sleepparalysis" class="map-image" />
+    </a>
+    <p class="map-label">isqa - //////////////sleepparalysis</p>
+    <p class="map-date">Mapped 13 Apr 2020</p>
+  </div>
+</div>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">the first in my ‘canon’ of maps, and for good reason. despite my changes in personality and vast mapping improvements in the years following this, many parts of my brand and what people know me for still stem from this particular map--the aggressively swollen sliders in the beginning, radical changes in slider velocity that are unfriendly to the player, pattern constructions that are strangely grotesque, and more. it outlined my fascination for osu!mapping and what parts of it i was fascinated by; slider construction and how visuals can convey what it’s like to listen to a song (despite that being sickly abstract). since then i’ve grown into a more well rounded mindset with me focusing on movement and rhythm, however i still owe a lot to this map for shaping who i wanted to be.</p>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">fun fact: not too long after i released this, i wrote an entire paranormal narrative about a player being possessed by a self-insert cryptid to play this map. i read it recently, and to put it bluntly it’s quite terrible! the whole thing is full of figurative language that is randomly dissonant with the whole grotesque aesthetic i was trying to go for--needless to say i’m never publishing that.</p>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em; color: #888;">(but if you really, really want it… try contacting me)</p>
+<div style="display: flex; justify-content: center; margin-top: 2em; margin-bottom: 2em;">
+<div style="width: 45px; height: 45px; background-color: red;"></div><div style="width: 45px; height: 45px; background-color: #b90000;"></div>
+</div>
+    <footer>
+      <p>
+        © 2025 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        Website source code is open source and licensed under the MIT License.
+        <a href="https://github.com/blixys/blixys.github.io">View on GitHub</a>.<br />
+        <a href="https://www.pixiv.net/en/artworks/32947529">Background illustrated by haru@</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    const mappingIcon = document.getElementById("mappingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    mappingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
+
+
