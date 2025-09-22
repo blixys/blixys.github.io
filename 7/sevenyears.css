@@ -1,0 +1,143 @@
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+/* you found me */
+
+
+body {
+  background-color: #AAAAAA;
+  font-family: "Helvetica Neue", "Inter", sans-serif;
+  font-size: 12pt;
+  line-height: 1.4;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('inter-regular-webfont.woff2') format('woff2'),
+       url('inter-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+div.site {
+  max-width: 727px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  size: 16pt;
+}
+
+a {
+  color: #6BAFC3;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+     
+      color: black;
+    }
