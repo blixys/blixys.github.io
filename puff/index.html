@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>puff - blixys</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    html, body{
+      height: 100%;
+      margin: 0;
+    }
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <img id="puff" src="puff.png" style="cursor: wait;" alt="puff">
+  <audio id="clickSound" src="puff.wav" preload="auto"></audio>
+   <script>
+    const puff = document.getElementById("puff");
+    const clickSound = document.getElementById("clickSound");
+    puff.addEventListener("click", () => {
+      const s = new Audio('puff.wav');
+      s.play().catch(e => {});
+    });
+  </script>
+</body>
+</html>
+
+
