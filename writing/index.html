@@ -17,6 +17,43 @@
       font-size: 10pt;
       color: #808080;
     }
+      #writingIcon {
+    cursor: pointer;
+  }
+.writ-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 12px;
+}
+.writ-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.writ-image {
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.writ-label {
+  font-weight: bold;
+  margin: 8px 0 2px;
+}
+.writ-date {
+  font-size: 0.8em;
+  color: #666;
+  margin: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
   </style>
 </head>
 <body>
@@ -30,78 +67,97 @@
     <li><a href="../artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
   </ul>
 <br>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2025.11.10</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="benji-scubdomino\" style="text-decoration:none; color: black;">Sun Kil Moon - Benji, review written by ScubDomino</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2025.08.27</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="right-eye\" style="text-decoration:none; color: black;">right eye</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2025.05.20</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="endtroducing\" style="text-decoration:none; color: black;">DJ Shadow - Endtroducing.....</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2025.05.17</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="human-after-all\" style="text-decoration:none; color: black;">Daft Punk - Human After All</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2025.04.12</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="fallen-angels-downpour\" style="text-decoration:none; color: black;">Fallen Angels, <span style="color: #0B95B4;">review written by downpour</span></a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2024.10.08</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="where-ive-been\" style="text-decoration:none; color: black;">where i've been</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2023.05.19</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="when-will-i-have-it-i-wonder\" style="text-decoration:none; color: black;">when will I have it I wonder</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2022.12.13</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="flood\" style="text-decoration:none; color: black;">boris - flood</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2022.03.09</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="untitled-200\" style="text-decoration:none; color: black;">Untitled (200)</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2022.02.14</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="untitled-usb-ports\" style="text-decoration:none; color: black;">Untitled (usb ports)</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2022.01.23</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="untitled-concrete-walls\" style="text-decoration:none; color: black;">Untitled (concrete walls)</a>
-    </p>
-</div>
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
-    <p style="color: #808080; margin: 0;">2021.10.25</p>
-    <p style="text-align: right; margin: 0;">
-        <a href="untitled-the-blue\" style="text-decoration:none; color: black;">Untitled (the blue)</a>
-    </p>
-</div>
+    <div class="writ-grid">
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/benji-scubdomino">
+      <img src="../images/benji.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Review: Sun Kil Moon - Benji, c.o. Scub</p>
+    <p class="writ-date">Written 10 November 2025</p>
+  </div>
+  
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/right-eye">
+      <img src="../images/right-eye.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">right eye</p>
+    <p class="writ-date">Written 27 August 2025</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/endtroducing">
+      <img src="../images/endtroducing.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Review: DJ Shadow - Endtroducing.....</p>
+    <p class="writ-date">Written 20 May 2025</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/human-after-all">
+      <img src="../images/human-after-all.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Review: Daft Punk - Human After All</p>
+    <p class="writ-date">Written 17 May 2025</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/fallen-angels-downpour">
+      <img src="../images/fallen-angels.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Review: Fallen Angels, c.o. downpour</p>
+    <p class="writ-date">Written 12 April 2025</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/where-ive-been">
+      <img src="../images/where-ive-been.png" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">where i've been</p>
+    <p class="writ-date">Written 08 October 2024</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/when-will-i-have-it-i-wonder">
+      <img src="../images/when-will-i-have-it-i-wonder.png" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">when will I have it I wonder</p>
+    <p class="writ-date">Written 19 May 2023</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/flood">
+      <img src="../images/flood.jpg" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Review: boris - flood</p>
+    <p class="writ-date">Written 13 December 2022</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/untitled-200">
+      <img src="../images/200.png" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Untitled (200)</p>
+    <p class="writ-date">Written 09 March 2022</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/untitled-usb-ports">
+      <img src="../images/usb.png" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Untitled (usb ports)</p>
+    <p class="writ-date">Written 14 February 2022</p>
+  </div>
+
+  <div class="writ-card">
+    <a href="https://blixys.com/writing/untitled-the-blue">
+      <img src="../images/theblue.png" alt="Benji album cover" class="writ-image" />
+    </a>
+    <p class="writ-label">Untitled (the blue)</p>
+    <p class="writ-date">Written 25 October 2021</p>
+  </div>
+
+    </div>
     <br>
     <footer>
       <p>
