@@ -31,7 +31,7 @@
 <body>
   <div class="site">
   <ul class="navbar">
-    <li><a href="index.html"><img src="images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+    <li><img src="images/logo.svg" id="logo" alt="blixys logo" style="cursor: pointer;" width="40" height="40" /></li>
     <li><a href="writing\" style="text-decoration:none; color: black"><p>writing</p></a></li>
     <li><a href="mapping\" style="text-decoration:none; color: black"><p>mapping</p></a></li>
     <li><a href="artwork\" style="text-decoration:none; color: black"><p>artwork</p></a></li>
@@ -67,6 +67,14 @@
 
   </div>
 </body>
+   <script>
+    const logo = document.getElementById("logo");
+    const clickSound = document.getElementById("clickSound");
+    logo.addEventListener("click", () => {
+      const s = new Audio('sounds/logo.wav');
+      s.play().catch(e => {});
+    });
+  </script>
 </html>
 
 
