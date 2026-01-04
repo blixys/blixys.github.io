@@ -84,7 +84,9 @@
   </div>
   <div id="yearProgressInfo">
     <p id="yearProgressText"></p>
-    <p id="yearDateTime"></p>
+  <p id="yearDateTime">
+    <span id="dt-prefix"></span><span id="blink-colon">:</span><span id="dt-suffix"></span>
+  </p>
   </div>
 </div>
     <br>
@@ -128,11 +130,38 @@
       const ampm = parts.find(p => p.type === 'dayPeriod').value.toLowerCase();
 
       const dateTimeString = `${year}-${month}-${day} ${hour}:${minute}${ampm} PT`;
-      yearDateTime.textContent = dateTimeString;
+      document.getElementById("dt-prefix").textContent =
+      `${year}-${month}-${day} ${hour}`;
+      document.getElementById("dt-suffix").textContent =
+      `${minute}${ampm} PT`;
+
       
       const preciseProgress = progress.toFixed(8);
       progressBar.style.width = preciseProgress + "%";
       progressText.textContent = preciseProgress + "%";
+
+function startRealSecondBlink() {
+  const colon = document.getElementById("blink-colon");
+
+  function sync() {
+    const now = new Date();
+    colon.style.visibility =
+      now.getSeconds() % 2 === 0 ? "visible" : "hidden";
+  }
+
+  sync();
+
+  const msUntilNextSecond = 1000 - (Date.now() % 1000);
+  setTimeout(() => {
+    sync();
+    setInterval(sync, 1000);
+  }, msUntilNextSecond);
+}
+
+startRealSecondBlink();
+
+
+
     }
     setInterval(updateYearProgress, 1);
     updateYearProgress();
