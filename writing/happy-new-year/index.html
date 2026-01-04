@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>right eye - blixys</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="writingIcon" src="../../images/writing.png" alt="writing icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../../sounds/writing.wav" preload="auto"></audio></li>
+    <li><a href="https://blixys.com/writing" style="text-decoration:none; color: #888"><p>writing</p></a></li>
+    <li><a href="https://blixys.com/mapping" style="text-decoration:none; color: black"><p>mapping</p></a></li>
+    <li><a href="https://blixys.com/artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+    <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+    <p style=" text-align: left; font-size: 24pt; font-weight: bold; margin-top: 1em; margin-bottom: 0em;">happy new year!</p>
+    </div>
+    <div style="display: flex; justify-content: space-between; width: 100%; margin: 0;">
+        <p style="color: #808080; margin: 0;">2025.12.31</p>
+        <p style="text-align: right; margin: 0;"><a href="https://blixys.com/writing" style="text-decoration:none; color: #808080"><i>go back</i></a></p>
+    </div>
+    <hr style="margin-top: 0.8em; margin-bottom: 0.5em; border: none; border-top: 2px solid black;" /></p>
+    <p style="text-align: justify;">it’s been fourteen months since i quit mapping, and six months since i’ve returned. i earnestly thought i would truly quit by the end of this year, but SOMEHOW i’ve been proven very wrong!</p>
+    <p style="text-align: justify;">seven years is a long time, and with 2026 around the corner i’m going into my eighth year of mapping. </p>
+    <p style="text-align: justify;">this year was equal parts humbling and inspiring; never before have i been filled with such an unwavering hope for the next generation of mappers, and likewise never before have i felt my age here so strongly. people like -Arko, MeowUsername, KomachiBaka, 6pX, kuyusu, and more (not to mention obwc!?) are pushing the bounds of mapping way farther than i thought it could ever be pushed! to be here in osu! for just a little while longer would be nothing short of an honor for me.</p>
+    <p style="text-align: justify;">whether or not mapping is a “valid artform” is mattering to me less and less. though it’s been incredibly difficult, rekindling my love for it has made me fufilled in a way i haven’t been in years, and no one can take that away from me. i wanna say thanks to downpour, ancel, wyit, and -Arko (most promising) for helping me as i start making maps again.
+</p>
+    <p style="text-align: justify;">and thank <i>you</i> for the warm reception on my latest maps! i’m never fully satisfied with what i make, but your support truly means everything to me… okay, maybe not everything. being approval hungry will kill you!</p>
+    <p style="text-align: justify;">see you in 2026</p> 
+    <footer>
+      <p>
+        © 2026 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        
+      </p>
+    </footer>
+  </div>
+    <script>
+    const writingIcon = document.getElementById("writingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    writingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
+
+
