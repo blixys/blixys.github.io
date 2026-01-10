@@ -2,11 +2,11 @@ body {
   background-color: #DDDDDD;
   font-size: 12pt;
   line-height: 1.4;
-  font-family: 'TeX Gyre Heros', sans-serif;
+  font-family: 'TeXGyreHeros', sans-serif;
 }
 
 :root {
-  font-family: 'TeX Gyre Heros', sans-serif;
+  font-family: 'TeXGyreHeros', sans-serif;
 }
 
 div.site {
