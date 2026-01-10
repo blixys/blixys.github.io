@@ -1,17 +1,11 @@
 body {
   background-color: #DDDDDD;
-  font-family: "Helvetica Neue", "Inter", sans-serif;
   font-size: 12pt;
   line-height: 1.4;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('inter-regular-webfont.woff2') format('woff2'),
-       url('inter-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+:root {
+  font-family: 'TeX Gyre Heros';
 }
 
 div.site {
