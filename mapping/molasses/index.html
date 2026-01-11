@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://blixys.com/fonts/texgyreheros.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Molasses - blixys</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="../../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+      #mappingIcon {
+    cursor: pointer;
+  }
+.map-grid {
+  gap: 0px;
+  width: 100%;
+  margin-top: 0px;
+}
+.map-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.map-image {
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.map-label {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 12px 0 2px;
+}
+.map-date {
+  font-size: 1.2em;
+  color: #666;
+  margin: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <ul class="navbar">
+    <li><a href="https://blixys.com/"><img src="../../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+        <li><img id="mappingIcon" src="../../images/mapping.png" alt="mapping icon" style="cursor: pointer;" width="40" height="40">
+	 <audio id="clickSound" src="../../sounds/mapping.wav" preload="auto"></audio></li>
+    <li><a href="https://blixys.com/writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+    <li><a href="https://blixys.com/mapping" style="text-decoration:none; color: #888"><p>mapping</p></a></li>
+    <li><a href="https://blixys.com/artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  </ul>
+    <br>
+    <div class="map-grid">
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2463122">
+      <img src="https://assets.ppy.sh/beatmaps/2463122/covers/cover@2x.jpg" alt="molasses" class="map-image" />
+    </a>
+    <p class="map-label">Hiatus Kaiyote - Molasses</p>
+    <p class="map-date">Mapped 11 November 2025 <img src="../../images/ranked.svg" style="width: 15px; margin-left: 4px;"></p>
+  </div>
+</div>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">i tend to take a ridiculously long time to finish my maps. this isn't particularly out of difficulty or burn out; infact to think i've been working on this map for almost three years seems like an overstatement to its effort. i just live a slower life nowadays, and i don't believe in mapping unless i have something to say.</p>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">however, an unintended side effect of this is seeing how i've changed as a person over time. as someone who grew up with mapping, a predominantly visual artform, what i see and what i go through is probably the second most influential factor on my maps besides the song itself. this is most obvious in 01:37:847, where i returned to mapping after seeing (and loving) team south korea's map of F1055. it bleeds its mannerisms with the subtlety of wet cement.</p>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">is that a bug, or a feature? depends on how much you value visual cohesion, but if i'm being honest i'd rather have that effect than not have it at all. mapping has always taken an intimate place in my heart, and seeing how that's changed and developed over time in the same map is nothing short of a privilege to me. i love seeing signs of my tenure, and i hope you will too. or just play the map for what it is - a map! that's probably the more sane decision anyway.</p>
+<p style="text-align: justify; width: 80%; margin: auto; margin-bottom: 1em; margin-top: 1em;">thank you for playing. my next map will be my first entirely made post-hiatus - see you then!</p>
+
+<div style="display: flex; justify-content: center; margin-top: 2em; margin-bottom: 2em;">
+<div style="width: 45px; height: 45px; background-color: rgb(255,88,100);"></div>
+<div style="width: 45px; height: 45px; background-color: rgb(17,254,176);"></div>
+<div style="width: 45px; height: 45px; background-color: rgb(255,94,55);"></div>
+<div style="width: 45px; height: 45px; background-color: rgb(173,255,95);"></div>
+</div>
+    <footer>
+      <p>
+        © 2026 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        <a href="https://www.behance.net/gallery/16222049/Patti-Mollica">Background by Patti Mollica</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    const mappingIcon = document.getElementById("mappingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    mappingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
+
+
