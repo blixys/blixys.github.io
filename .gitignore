@@ -20,4 +20,4 @@ build/
 # Environment files
 .env
 compile/api.toml
-compile
+compile/
