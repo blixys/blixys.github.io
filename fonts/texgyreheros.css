@@ -1,9 +1,27 @@
 @font-face {
+    font-family: 'TeXGyreHerosCondensed';
+    src: url('TeXGyreHerosCondensed-Bold.woff2') format('woff2'),
+        url('TeXGyreHerosCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'TeXGyreHeros';
     src: url('TeXGyreHeros-Bold.woff2') format('woff2'),
         url('TeXGyreHeros-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TeXGyreHerosCondensed';
+    src: url('TeXGyreHerosCondensed-Italic.woff2') format('woff2'),
+        url('TeXGyreHerosCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -16,6 +34,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'TeXGyreHerosCondensed';
+    src: url('TeXGyreHerosCondensed-BoldItalic.woff2') format('woff2'),
+        url('TeXGyreHerosCondensed-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'TeXGyreHeros';
@@ -26,6 +52,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'TeXGyreHerosCondensed';
+    src: url('TeXGyreHerosCondensed-Regular.woff2') format('woff2'),
+        url('TeXGyreHerosCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'TeXGyreHeros';
