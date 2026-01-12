@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://blixys.com/fonts/texgyreheros.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - blixys</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    html, body{
+      height: 100%;
+      margin: 0;
+    }
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+    }
+    #pointofcontact{
+      height: 100px;
+      width: 100px;
+      background-color: #000;
+      border-radius: 50%;
+      display: inline-block;
+		}
+  </style>
+</head>
+<body>
+  <div id="pointofcontact" style="cursor: pointer;" alt="pointofcontact"></div>
+</body>
+  <audio id="clickSound" src="pointofcontact.wav" preload="auto"></audio>
+   <script>
+    const puff = document.getElementById("pointofcontact");
+    const clickSound = document.getElementById("clickSound");
+    let isPlaying = false;
+    let canClick = true;
+    
+    puff.addEventListener("click", () => {
+      if (!canClick) return;
+      canClick = false;
+      puff.classList.add('disabled');
+      const s = new Audio('pointofcontact.wav');
+      s.play().catch(e => {});
+      setTimeout(() => {
+        puff.classList.remove('disabled');
+        canClick = true;
+      showEmailForm()
+      }, 150);
+    });
+
+function showEmailForm() {
+  const formContainer = document.createElement('div');
+  formContainer.id = 'emailFormContainer';
+  formContainer.innerHTML = `
+    <style>
+      #emailFormContainer input,
+      #emailFormContainer textarea {
+        width: 100%;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        border: 2px solid #888;
+        background: #ddd;
+        border-radius: 2px;
+        font-family: 'TexGyreHeros', sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+      
+      #emailFormContainer input:focus,
+      #emailFormContainer textarea:focus {
+        outline: none;
+        border-color: #666;
+      }
+      
+      #emailFormContainer textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      
+      #emailFormContainer button {
+        width: 100%;
+        padding: 14px;
+        background: #888;
+        color: #ddd;
+        border: none;
+        border-radius: 4px;
+        font-family: 'TexGyreHeros', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      
+      #emailFormContainer button:hover {
+        background: #777;
+      }
+      
+      #emailFormContainer button:active {
+        background: #666;
+      }
+    </style>
+    <form action="https://formsubmit.co/blixys@blixys.com" method="POST">
+  <div style="display: flex; justify-content: space-between; gap: 10px">
+      <input type="text" name="name" placeholder="NAME" required>
+      <input type="email" name="email" placeholder="EMAIL" required>
+      </div>
+      <input type="hidden" name="_subject" value="from blixys.com">
+      <input type="hidden" name="_next" value="https://blixys.com/contact">
+      <textarea name="message" placeholder="MESSAGE" rows="6" required></textarea>
+      <button type="submit">SEND</button>
+      <input type="hidden" name="_captcha" value="false">
+    </form> 
+  `;
+  puff.parentNode.replaceChild(formContainer, puff);
+}
+  </script>
+</html>
