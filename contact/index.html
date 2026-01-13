@@ -58,7 +58,7 @@
       if (!canClick) return;
       canClick = false;
       puff.classList.add('disabled');
-      const s = new Audio('pointofcontact.wav');
+      const s = new Audio('arf.wav');
       s.play().catch(e => {});
       setTimeout(() => {
         puff.classList.remove('disabled');
@@ -121,7 +121,7 @@ function showEmailForm() {
     <form action="https://formsubmit.co/blixys@blixys.com" method="POST">
   <div style="display: flex; justify-content: space-between; gap: 10px">
       <input type="text" name="name" placeholder="NAME" required>
-      <input type="email" name="email" placeholder="EMAIL" required>
+      <input type="email" name="email" placeholder="EMAIL (OPTIONAL)">
       </div>
       <input type="hidden" name="_subject" value="from blixys.com">
       <input type="hidden" name="_next" value="https://blixys.com/contact/thank-you.html">
