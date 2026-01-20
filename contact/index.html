@@ -11,6 +11,8 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../mystyle.css" />
+  <link rel="preload" href="beepc.ogg" as="audio">
+  <link rel="preload" href="../fonts/texgyreheros-regular.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     html, body{
       height: 100%;
@@ -54,17 +56,21 @@
     let isPlaying = false;
     let canClick = true;
     
+    const preloadedSound = new Audio('beepc.ogg');
+    preloadedSound.preload = 'auto';
+    preloadedSound.load();
+
     puff.addEventListener("click", () => {
       if (!canClick) return;
       canClick = false;
       puff.classList.add('disabled');
-      const s = new Audio('arf.wav');
+      const s = preloadedSound.cloneNode();
       s.play().catch(e => {});
       setTimeout(() => {
         puff.classList.remove('disabled');
         canClick = true;
       showEmailForm()
-      }, 10000);
+      }, 0);
     });
 
 function showEmailForm() {
@@ -79,7 +85,6 @@ function showEmailForm() {
         margin-bottom: 8px;
         border: 1px solid #000;
         background: #ddd;
-        border-radius: 2px;
         font-family: 'TexGyreHerosCondensed', sans-serif;
         font-size: 16px;
         box-sizing: border-box;
@@ -103,7 +108,6 @@ function showEmailForm() {
         background: #888;
         color: #ddd;
         border: none;
-        border-radius: 4px;
         font-family: 'TexGyreHerosCondensed', sans-serif;
         font-size: 16px;
         cursor: pointer;
@@ -119,12 +123,12 @@ function showEmailForm() {
       }
     </style>
     <form action="https://formsubmit.co/blixys@blixys.com" method="POST">
-  <div style="display: flex; justify-content: space-between; gap: 10px">
+  <div style="display: flex; justify-content: space-between; gap: 8px">
       <input type="text" name="name" placeholder="NAME" required>
-      <input type="email" name="email" placeholder="EMAIL (OPTIONAL)">
+      <input type="email" name="email" placeholder="EMAIL" required>
       </div>
       <input type="hidden" name="_subject" value="from blixys.com">
-      <input type="hidden" name="_next" value="https://blixys.com/contact/thank-you.html">
+      <input type="hidden" name="_next" value="https://blixys.com/contact/thank-you">
       <textarea name="message" placeholder="ASK ME ANYTHING" rows="12" style="resize: none" required></textarea>
       <button type="submit">SEND</button>
       <input type="hidden" name="_captcha" value="false">
