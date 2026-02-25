@@ -5,6 +5,22 @@ body {
   font-family: 'TeXGyreHeros', sans-serif;
 }
 
+.writing {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  text-rendering: optimizeLegibility;
+  hanging-punctuation: first last;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   font-family: 'TeXGyreHeros', sans-serif;
 }

@@ -70,3 +70,31 @@
     font-display: swap;
 }
 
+@font-face {
+  font-family: 'ML Modern';
+  src: url('mlmr10.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ML Modern';
+  src: url('mlmbx10.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ML Modern';
+  src: url('mlmri10.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ML Modern Caps';
+  src: url('mlmcsc10.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
