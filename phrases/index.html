@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://blixys.com/fonts/texgyreheros.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phrases - blixys</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../mystyle.css" />
+  <style>
+    footer {
+      text-align: right;
+      padding: 0px;
+      font-size: 10pt;
+      color: #808080;
+    }
+    
+@font-face {
+  font-family: 'New Computer Modern';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../wyit/wyitfonts/NewCM10-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'New Computer Modern';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../wyit/wyitfonts/NewCM10-BookItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'New Computer Modern';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../wyit/wyitfonts/NewCM10-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'New Computer Modern';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../wyit/wyitfonts/NewCM10-BoldItalic.woff2') format('woff2');
+}
+body {
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  font-family: var(--font-main);
+  font-feature-settings: "calt" 1, "hlig" 0, "hist" 0;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures no-discretionary-ligatures;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  line-height: var(--base-line-height);
+
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  text-size-adjust: 100%;
+  text-underline-offset: 0.12em;
+
+  hanging-punctuation: first last;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 2;
+  hyphenate-limit-lines: 2;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  overflow-wrap: break-word;
+  orphans: 3;
+  widows: 3;
+  text-wrap: pretty;
+}
+  </style>
+  <script src="../js/phrases.js"></script>
+</head>
+<body>
+  <div class="site">
+  <ul class="navbar">
+    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+  </ul>
+  <div id="typedtext" style="font-size: 64pt; line-height: 1.2; font-family: 'New Computer Modern', serif;"></div>
+  <br>
+    <footer>
+      <p>
+        © 2026 blixys. All works are under copyright and may not be reused
+        without permission.<br />
+        
+      </p>
+    </footer>
+  </div>
+    <script>
+    const writingIcon = document.getElementById("writingIcon");
+    const clickSound = document.getElementById("clickSound");
+
+    writingIcon.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
+
+
