@@ -276,8 +276,8 @@ function random(lower_bound, upper_bound) {
     return Math.round(Math.random() * (upper_bound - lower_bound) + lower_bound);
 }
 
-window.onload = (function () {
-    var image = document.getElementById("epic");
+var image = document.getElementById("epic");
+if (image) {
     let selection = img_filenames[random(0, img_filenames.length - 1)];
-    image.setAttribute("src", selection) 
-})
+    image.setAttribute("src", selection);
+}
