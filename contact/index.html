@@ -12,8 +12,15 @@
 <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../mystyle.css" />
   <link rel="preload" href="beepc.ogg" as="audio">
-  <link rel="preload" href="../fonts/texgyreheros-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/TeXGyreHeros-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../wyit/wyitfonts/NewCM10-Book.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+  font-family: 'New Computer Modern';
+  src: url('../wyit/wyitfonts/NewCM10-Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
     html, body{
       height: 100%;
       margin: 0;
@@ -44,10 +51,14 @@
       border-radius: 50%;
       display: inline-block;
 		}
+    
   </style>
 </head>
 <body>
   <div id="pointofcontact" style="cursor: pointer;" alt="pointofcontact"></div>
+  <div style="font-family: 'TexGyreHerosCondensed', sans-serif; position: absolute; width: 0; height: 0; overflow: hidden; visibility: hidden;">
+  preload
+</div>
 </body>
   <audio id="clickSound" src="pointofcontact.wav" preload="auto"></audio>
    <script>
@@ -78,23 +89,61 @@ function showEmailForm() {
   formContainer.id = 'emailFormContainer';
   formContainer.innerHTML = `
     <style>
-      #emailFormContainer input,
+      #emailFormContainer {
+        border: 1px solid #000;
+        background: #fff;
+        padding: 8px;
+        font-family: 'TexGyreHeros', monospace, sans-serif;
+        width: 100%;
+        max-width: 550px;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      
+      .sys-header {
+        background: #000;
+        color: #fff;
+        padding: 4px 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .field-group {
+        border: 1px solid #000;
+        margin-bottom: 8px;
+        padding: 6px;
+        background: #fff;
+      }
+      
+      .field-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        padding-bottom: 2px;
+      }
+
+      #emailFormContainer input:not([type="hidden"]),
       #emailFormContainer textarea {
         width: 100%;
-        padding: 8px 8px;
-        margin-bottom: 8px;
-        border: 1px solid #000;
-        background: #ddd;
-        font-family: 'TexGyreHerosCondensed', sans-serif;
+        padding: 4px 0;
+        border: none;
+        background: transparent;
+        font-family: inherit;
         font-size: 16px;
         box-sizing: border-box;
-        transition: border-color 0.3s ease;
       }
       
       #emailFormContainer input:focus,
       #emailFormContainer textarea:focus {
         outline: none;
-        border-color: #666;
+        background: #eef;
       }
       
       #emailFormContainer textarea {
@@ -105,36 +154,55 @@ function showEmailForm() {
       #emailFormContainer button {
         width: 100%;
         padding: 10px;
-        background: #888;
-        color: #ddd;
-        border: none;
-        font-family: 'TexGyreHerosCondensed', sans-serif;
+        background: #000;
+        color: #fff;
+        border: 1px solid #000;
+        font-family: inherit;
         font-size: 16px;
+        text-transform: uppercase;
         cursor: pointer;
-        transition: background 0.1s ease;
       }
       
       #emailFormContainer button:hover {
-        background: #000;
+        background: #fff;
+        color: #000;
       }
       
       #emailFormContainer button:active {
         background: #ff0000;
+        color: #fff;
       }
     </style>
+    
+    <div class="sys-header">
+      <span>Contact</span>
+    </div>
+
     <form action="https://formsubmit.co/blixys@blixys.com" method="POST">
-  <div style="display: flex; justify-content: space-between; gap: 8px">
-      <input type="text" name="name" placeholder="NAME" required>
-      <input type="email" name="email" placeholder="EMAIL" required>
-      </div>
       <input type="hidden" name="_subject" value="from blixys.com">
       <input type="hidden" name="_next" value="https://blixys.com/contact/thank-you">
-      <textarea name="message" placeholder="ASK ME ANYTHING" rows="12" style="resize: none" required></textarea>
-      <button type="submit">SEND</button>
       <input type="hidden" name="_captcha" value="false">
-    </form> 
+      
+      <div style="display: flex; gap: 8px; margin-bottom: 0;">
+        <div class="field-group" style="flex: 1;">
+          <div class="field-label"><span>Name</span><span>*</span></div>
+          <input type="text" name="name" required autocomplete="off">
+        </div>
+        <div class="field-group" style="flex: 1;">
+          <div class="field-label"><span>Email</span><span>*</span></div>
+          <input type="email" name="email" required autocomplete="off">
+        </div>
+      </div>
+      
+      <div class="field-group">
+        <div class="field-label"><span>Ask me Anything</span><span>*</span></div>
+        <textarea name="message" required></textarea>
+      </div>
+      
+      <button type="submit">Send</button>
+    </form>   
   `;
-  puff.parentNode.replaceChild(formContainer, puff);
+  puff.parentNode.replaceChild(formContainer, puff); //[cite: 2]
 }
   </script>
 </html>
