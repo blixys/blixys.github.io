@@ -22,38 +22,87 @@
     cursor: pointer;
   }
 .writ-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   width: 100%;
   margin-top: 12px;
 }
 .writ-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 28px;
+  text-decoration: none;
+  color: inherit;
+}
+.writ-card:focus-visible {
+  outline: 2px solid #6BAFC3;
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+.writ-cover {
+  flex: 0 0 38%;
 }
 .writ-image {
+  display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 12px;
-  display: flex;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.writ-card:hover .writ-image {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.26);
+}
+.writ-meta {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
 }
 .writ-label {
   font-weight: bold;
-  margin: 8px 0 2px;
+  font-size: 1.5em;
+  line-height: 1.3;
+  color: #333;
+  margin: 0 0 8px;
+}
+.writ-card:hover .writ-label {
+  text-decoration: underline;
+}
+.writ-subtitle {
+  font-size: 1em;
+  color: #5a5a5a;
+  margin: 0 0 8px;
 }
 .writ-date {
-  font-size: 0.8em;
-  color: #666;
-  margin: 0px;
+  font-size: 0.9em;
+  color: #707070;
+  margin: 0;
 }
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+@media (max-width: 520px) {
+  .writ-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .writ-cover {
+    flex-basis: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .writ-image {
+    transition: none;
+  }
 }
   </style>
 </head>
@@ -70,93 +119,115 @@
 <br>
     <div class="writ-grid">
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/happy-new-year">
+  <a href="https://blixys.com/writing/happy-new-year" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/happy-new-year.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">happy new year</p>
-    <p class="writ-date">Written 31 December 2025</p>
-  </div>
-      
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/benji-scubdomino">
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">happy new year</p>
+      <p class="writ-date">Written 31 December 2025</p>
+    </div>
+  </a>
+
+  <a href="https://blixys.com/writing/benji-scubdomino" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/benji.jpg" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Review: Sun Kil Moon - Benji, c/o Scub</p>
-    <p class="writ-date">Written 10 November 2025</p>
-  </div>
-  
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/endtroducing">
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Review: Sun Kil Moon - Benji, c/o Scub</p>
+      <p class="writ-date">Written 10 November 2025</p>
+    </div>
+  </a>
+
+  <a href="https://blixys.com/writing/endtroducing" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/endtroducing.jpg" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Review: DJ Shadow - Endtroducing.....</p>
-    <p class="writ-date">Written 20 May 2025</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Review: DJ Shadow - Endtroducing.....</p>
+      <p class="writ-date">Written 20 May 2025</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/human-after-all">
+  <a href="https://blixys.com/writing/human-after-all" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/human-after-all.jpg" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Review: Daft Punk - Human After All</p>
-    <p class="writ-date">Written 17 May 2025</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Review: Daft Punk - Human After All</p>
+      <p class="writ-date">Written 17 May 2025</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/fallen-angels-downpour">
+  <a href="https://blixys.com/writing/fallen-angels-downpour" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/fallen-angels.jpg" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Review: Fallen Angels, c/o downpour</p>
-    <p class="writ-date">Written 12 April 2025</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Review: Fallen Angels, c/o downpour</p>
+      <p class="writ-date">Written 12 April 2025</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/where-ive-been">
+  <a href="https://blixys.com/writing/where-ive-been" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/where-ive-been.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">where i've been</p>
-    <p class="writ-date">Written 08 October 2024</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">where i've been</p>
+      <p class="writ-date">Written 08 October 2024</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/when-will-i-have-it-i-wonder">
+  <a href="https://blixys.com/writing/when-will-i-have-it-i-wonder" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/when-will-i-have-it-i-wonder.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">when will I have it I wonder</p>
-    <p class="writ-date">Written 19 May 2023</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">when will I have it I wonder</p>
+      <p class="writ-date">Written 19 May 2023</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/flood">
+  <a href="https://blixys.com/writing/flood" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/flood.jpg" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Review: boris - flood</p>
-    <p class="writ-date">Written 13 December 2022</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Review: boris - flood</p>
+      <p class="writ-date">Written 13 December 2022</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/untitled-200">
+  <a href="https://blixys.com/writing/untitled-200" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/200.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Untitled (200)</p>
-    <p class="writ-date">Written 09 March 2022</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Untitled (200)</p>
+      <p class="writ-date">Written 09 March 2022</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/untitled-usb-ports">
+  <a href="https://blixys.com/writing/untitled-usb-ports" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/usb.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Untitled (usb ports)</p>
-    <p class="writ-date">Written 14 February 2022</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Untitled (usb ports)</p>
+      <p class="writ-date">Written 14 February 2022</p>
+    </div>
+  </a>
 
-  <div class="writ-card">
-    <a href="https://blixys.com/writing/untitled-the-blue">
+  <a href="https://blixys.com/writing/untitled-the-blue" class="writ-card">
+    <div class="writ-cover">
       <img src="../images/theblue.png" alt="" class="writ-image" />
-    </a>
-    <p class="writ-label">Untitled (the blue)</p>
-    <p class="writ-date">Written 25 October 2021</p>
-  </div>
+    </div>
+    <div class="writ-meta">
+      <p class="writ-label">Untitled (the blue)</p>
+      <p class="writ-date">Written 25 October 2021</p>
+    </div>
+  </a>
 
     </div>
     <br>
@@ -178,5 +249,3 @@
   </script>
 </body>
 </html>
-
-
