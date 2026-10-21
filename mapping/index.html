@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="https://blixys.com/fonts/texgyreheros.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapping - blixys</title>
+  <title>Mapping — blixys</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -64,23 +64,31 @@
 </head>
 <body>
   <div class="site">
-    <ul class="navbar">
-    <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
-        <li><img id="mappingIcon" src="../images/mapping.png" alt="mapping icon" style="cursor: pointer;" width="40" height="40">
-	 <audio id="clickSound" src="../sounds/mapping.wav" preload="auto"></audio></li>
-    <li><a href="https://blixys.com/writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
-    <li><a href="https://blixys.com/mapping" style="text-decoration:none; color: #888"><p>mapping</p></a></li>
-    <li><a href="https://blixys.com/artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
-    <li class="nav-right" style="text-align: justify; color: #dddddd; "><i>Click an image for a write-up about the map (WIP)</i></li>
-  </ul>
+<ul class="navbar" style="display: flex; align-items: center;">
+  <li><a href="../"><img src="../images/logo.svg" alt="blixys logo" width="40" height="40" /></a></li>
+  <li style="order: 1;"><img id="mappingIcon" src="../images/mapping.png" alt="mapping icon" style="cursor: pointer;" width="40" height="40">
+    <audio id="clickSound" src="../sounds/mapping.wav" preload="auto"></audio></li>
+  <li><a href="https://blixys.com/writing" style="text-decoration:none; color: black"><p>writing</p></a></li>
+  <li><a href="https://blixys.com/mapping" style="text-decoration:none; color: #888"><p>mapping</p></a></li>
+  <li><a href="https://blixys.com/artwork" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+  <li class="nav-right" style="margin-left: auto; text-align: justify; color: #dddddd;"><i>...</i></li>
+</ul>
     <br>
     <div class="map-grid">
+
+  <div class="map-card">
+    <a href="https://osu.ppy.sh/beatmapsets/2608578">
+      <img src="https://assets.ppy.sh/beatmaps/2608578/covers/cover@2x.jpg" alt="fm-synthesis" class="map-image" />
+    </a>
+    <p class="map-label">Camellia — FM Synthesis Experiment</p>
+    <p class="map-date">Mapped 23 August 2026 with -Arko</p>
+  </div>
 
   <div class="map-card">
     <a href="https://osu.ppy.sh/beatmapsets/2542651">
       <img src="https://assets.ppy.sh/beatmaps/2542651/covers/cover@2x.jpg" alt="music" class="map-image" />
     </a>
-    <p class="map-label">underscores - Music</p>
+    <p class="map-label">underscores — Music</p>
     <p class="map-date">Mapped 21 April 2026 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
   </div>
 
@@ -88,7 +96,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/2463122">
       <img src="https://assets.ppy.sh/beatmaps/2463122/covers/cover@2x.jpg" alt="molasses" class="map-image" />
     </a>
-    <p class="map-label">Hiatus Kaiyote - Molasses</p>
+    <p class="map-label">Hiatus Kaiyote — Molasses</p>
     <p class="map-date">Mapped 11 November 2025 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
   </div>
 
@@ -96,7 +104,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/2410326#osu/5233363">
       <img src="https://assets.ppy.sh/beatmaps/2410326/covers/cover@2x.jpg" alt="chirality" class="map-image" />
     </a>
-    <p class="map-label">Camellia - Chirality</p>
+    <p class="map-label">Camellia — Chirality</p>
     <p class="map-date">Mapped 27 July 2025 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
   </div>
 
@@ -104,7 +112,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/2396018#osu/5190641">
       <img src="https://assets.ppy.sh/beatmaps/2396018/covers/cover@2x.jpg" alt="utanokehai" class="map-image" />
     </a>
-    <p class="map-label">Ichiko Aoba - Utanokehai</p>
+    <p class="map-label">Ichiko Aoba — Utanokehai</p>
     <p class="map-date">Mapped 30 June 2025</p>
   </div>
   
@@ -112,7 +120,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/2301832#osu/4919466">
       <img src="https://assets.ppy.sh/beatmaps/2301832/covers/cover@2x.jpg" alt="Lifelike" class="map-image" />
     </a>
-    <p class="map-label">Porter Robinson - Lifelike</p>
+    <p class="map-label">Porter Robinson — Lifelike</p>
     <p class="map-date">Mapped 31 Dec 2024</p>
   </div>
 
@@ -120,7 +128,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1552776#osu/4471357">
       <img src="https://assets.ppy.sh/beatmaps/2126973/covers/cover@2x.jpg" alt="routing-gd" class="map-image" />
     </a>
-    <p class="map-label">Camellia - Routing <span style="color: #808080; font-weight: normal;">GD</span></p>
+    <p class="map-label">Camellia — Routing <span style="color: #808080; font-weight: normal;">GD</span></p>
     <p class="map-date">Mapped 28 Jan 2024 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
   </div>
 
@@ -128,7 +136,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/2108761#osu/4426100">
       <img src="https://assets.ppy.sh/beatmaps/2108761/covers/cover@2x.jpg" alt="kirei-na-sankaku" class="map-image" />
     </a>
-    <p class="map-label">JYOCHO - Kirei na Sankaku, Asahi Ningen</p>
+    <p class="map-label">JYOCHO — Kirei na Sankaku, Asahi Ningen</p>
     <p class="map-date">Mapped 24 Dec 2023 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
   </div>
 
@@ -144,7 +152,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1959500#osu/4060352">
       <img src="https://assets.ppy.sh/beatmaps/1959500/covers/cover@2x.jpg" alt="bad-apple" class="map-image" />
     </a>
-    <p class="map-label">Masayoshi Minoshima - Bad Apple!!</p>
+    <p class="map-label">Masayoshi Minoshima — Bad Apple!!</p>
     <p class="map-date">Mapped 19 Mar 2023</p>
   </div>
 
@@ -152,7 +160,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1872058#osu/3851855">
       <img src="https://assets.ppy.sh/beatmaps/1872058/covers/cover@2x.jpg" alt="intrjctn-nekomajin-vs" class="map-image" />
     </a>
-    <p class="map-label">NUITO - Intrjctn + NeKoMaJiN Vs</p>
+    <p class="map-label">NUITO — Intrjctn + NeKoMaJiN Vs</p>
     <p class="map-date">Mapped 23 Oct 2022 with wyit <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
   </div>
 
@@ -160,7 +168,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1741078#osu/3559329">
       <img src="https://assets.ppy.sh/beatmaps/1741078/covers/cover@2x.jpg" alt="see-you-again" class="map-image" />
     </a>
-    <p class="map-label">Tyler, The Creator - See You Again</p>
+    <p class="map-label">Tyler, The Creator — See You Again</p>
     <p class="map-date">Mapped 12 Apr 2022</p>
   </div>
 
@@ -168,7 +176,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1708862#osu/3491840">
       <img src="https://assets.ppy.sh/beatmaps/1708862/covers/cover@2x.jpg" alt="cant-get-over-you" class="map-image" />
     </a>
-    <p class="map-label">Joji - CAN'T GET OVER YOU</p>
+    <p class="map-label">Joji — CAN'T GET OVER YOU</p>
     <p class="map-date">Mapped 27 Feb 2022</p>
   </div>
 
@@ -176,7 +184,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1594233">
       <img src="https://assets.ppy.sh/beatmaps/1594233/covers/cover@2x.jpg" alt="see-you-later" class="map-image" />
     </a>
-    <p class="map-label">mayoi namekuji - see you later</p>
+    <p class="map-label">mayoi namekuji — see you later</p>
     <p class="map-date">Mapped 04 Oct 2021</p>
   </div>
 
@@ -184,7 +192,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1581564">
       <img src="https://assets.ppy.sh/beatmaps/1581564/covers/cover@2x.jpg" alt="theyaremanycolors" class="map-image" />
     </a>
-    <p class="map-label">Frums - <span style="color:red">they</span><span style="color:green">are</span><span style="color:blue">many</span>colors</p>
+    <p class="map-label">Frums — <span style="color:red">they</span><span style="color:green">are</span><span style="color:blue">many</span>colors</p>
     <p class="map-date">Mapped 19 Sep 2021</p>
   </div>
 
@@ -192,7 +200,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1563061">
       <img src="https://assets.ppy.sh/beatmaps/1563061/covers/cover@2x.jpg" alt="a-boy-is-a-gun" class="map-image" />
     </a>
-    <p class="map-label">Tyler, The Creator - A BOY IS A GUN*</p>
+    <p class="map-label">Tyler, The Creator — A BOY IS A GUN*</p>
     <p class="map-date">Mapped 28 Aug 2021</p>
   </div>
 
@@ -200,7 +208,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1475493">
       <img src="https://assets.ppy.sh/beatmaps/1475493/covers/cover@2x.jpg" alt="bloom" class="map-image" />
     </a>
-    <p class="map-label">j^p^n - bloom.</p>
+    <p class="map-label">j^p^n — bloom.</p>
     <p class="map-date">Mapped 27 May 2021</p>
   </div>
 
@@ -208,7 +216,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1377304">
       <img src="https://assets.ppy.sh/beatmaps/1377304/covers/cover@2x.jpg" alt="make-it-funky-now" class="map-image" />
     </a>
-    <p class="map-label">DOT96 - MAKE IT FUNKY NOW (BMS EDIT)</p>
+    <p class="map-label">DOT96 — MAKE IT FUNKY NOW (BMS EDIT)</p>
     <p class="map-date">Mapped 16 Feb 2021</p>
   </div>
 
@@ -216,7 +224,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1360992#osu/2816117">
       <img src="https://assets.ppy.sh/beatmaps/1360992/covers/cover@2x.jpg" alt="black-lotus" class="map-image" />
     </a>
-    <p class="map-label">wa. - Black Lotus</p>
+    <p class="map-label">wa. — Black Lotus</p>
     <p class="map-date">Mapped 29 Jan 2021 <img src="../images/loved.svg" style="width: 11px; margin-left: 5px;" alt="Loved"></p>
   </div>
 
@@ -224,7 +232,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1340364#osu/2776745">
       <img src="https://assets.ppy.sh/beatmaps/1340364/covers/cover@2x.jpg" alt="datamatics-prototype-ver20" class="map-image" />
     </a>
-    <p class="map-label">池田 亮司 - datamatics prototype-ver.2.0</p>
+    <p class="map-label">Ryoji Ikeda — datamatics prototype-ver.2.0</p>
     <p class="map-date">Mapped 04 Jan 2021</p>
   </div>
 
@@ -232,7 +240,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1332376#osu/2760563">
       <img src="https://assets.ppy.sh/beatmaps/1332376/covers/cover@2x.jpg" alt="odoru-mizushibuki" class="map-image" />
     </a>
-    <p class="map-label">あきやま うに - 踊る水飛沫</p>
+    <p class="map-label">Akiyama Uni — Odoru Mizushibuki</p>
     <p class="map-date">Mapped 25 Dec 2020</p>
   </div>
 
@@ -240,7 +248,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1289203#osu/2676292">
       <img src="https://assets.ppy.sh/beatmaps/1289203/covers/cover@2x.jpg" alt="let-mom-sleep" class="map-image" />
     </a>
-    <p class="map-label">長沼 英樹 - Let Mom Sleep</p>
+    <p class="map-label">長沼 英樹 — Let Mom Sleep</p>
     <p class="map-date">Mapped 29 Oct 2020 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;" alt="Ranked"></p>
   </div>
 
@@ -248,7 +256,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1210540#osu/2520130">
       <img src="https://assets.ppy.sh/beatmaps/1210540/covers/cover@2x.jpg" alt="asura" class="map-image" />
     </a>
-    <p class="map-label">Co shu Nie - asura</p>
+    <p class="map-label">Co shu Nie — asura</p>
     <p class="map-date">Mapped 09 Jul 2020</p>
   </div>
 
@@ -256,7 +264,7 @@
     <a href="https://osu.ppy.sh/beatmapsets/1063080#osu/2456973">
       <img src="https://assets.ppy.sh/beatmaps/1063080/covers/cover@2x.jpg" alt="coconut-mall-gd" class="map-image" />
     </a>
-    <p class="map-label">Ohta Asuka (...) - Coconut Mall <span style="color: #808080; font-weight: normal;">GD</span></p>
+    <p class="map-label">Ohta Asuka (...) — Coconut Mall <span style="color: #808080; font-weight: normal;">GD</span></p>
     <p class="map-date">Mapped 14 May 2020 <img src="../images/ranked.svg" style="width: 11px; margin-left: 5px;"></p>
   </div>
 
@@ -264,23 +272,23 @@
     <a href="https://osu.ppy.sh/beatmapsets/1169150#osu/2439133">
       <img src="https://assets.ppy.sh/beatmaps/1169150/covers/cover@2x.jpg" alt="burnt-rice" class="map-image" />
     </a>
-    <p class="map-label">Shawn Wasabi - Burnt Rice</p>
+    <p class="map-label">Shawn Wasabi — Burnt Rice</p>
     <p class="map-date">Mapped 11 May 2020</p>
   </div>
 
   <div class="map-card">
-    <a href="./caravan/">
+    <a href="https://osu.ppy.sh/beatmapsets/1144528">
       <img src="https://assets.ppy.sh/beatmaps/1144528/covers/cover@2x.jpg" alt="caravan" class="map-image" />
     </a>
-    <p class="map-label">John Wasson - Caravan</p>
+    <p class="map-label">John Wasson — Caravan</p>
     <p class="map-date">Mapped circa August 2020*</p>
   </div>
 
   <div class="map-card">
-    <a href="./sleepparalysis/">
+    <a href="https://osu.ppy.sh/beatmapsets/1147423">
       <img src="https://assets.ppy.sh/beatmaps/1147423/covers/cover@2x.jpg" alt="sleepparalysis" class="map-image" />
     </a>
-    <p class="map-label">isqa - //////////////sleepparalysis</p>
+    <p class="map-label">isqa — //////////////sleepparalysis</p>
     <p class="map-date">Mapped 13 Apr 2020</p>
   </div>
 
