@@ -46,6 +46,14 @@
       background-color: #b8b8b8;
       transition: width 1s ease;
     }
+    .burger {
+      opacity: 0;
+    }
+
+    .burger:hover,
+    .burger:focus-visible {
+      opacity: 1;
+    }
   </style>
   <script src="js/phrases.js"></script>
 </head>
@@ -56,6 +64,7 @@
     <li><a href="writing\" style="text-decoration:none; color: black"><p>writing</p></a></li>
     <li><a href="mapping\" style="text-decoration:none; color: black"><p>mapping</p></a></li>
     <li><a href="artwork\" style="text-decoration:none; color: black"><p>artwork</p></a></li>
+    <li><a href="in-n-out\" class="burger" style="text-decoration:none"><p>🍔</p></a></li>
     <li style="margin-left: auto;">
       <a href="phrases/" style="text-decoration: none; color: black;">
         <div id="typedtext" style="font-style: italic;"></div>
