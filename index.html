@@ -54,7 +54,67 @@
     .burger:focus-visible {
       opacity: 1;
     }
-  </style>
+        
+.navbar {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+.navbar li {
+  flex-shrink: 0;
+}
+
+.navbar li:last-child {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  margin-left: 16px !important;
+  text-align: right;
+  height: 2.4em;
+  display: flex !important;
+  align-items: center;
+  align-items: safe center;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+.navbar li:last-child a {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+#typedtext {
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 727px) {
+  .navbar {
+    flex-wrap: wrap !important;
+  }
+
+  .navbar li:last-child {
+    display: block !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: -8px;
+    text-align: left;
+    height: 2.4em;
+    overflow: hidden;
+  }
+
+  #typedtext {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+      </style>
   <script src="js/phrases.js"></script>
 </head>
 <body>

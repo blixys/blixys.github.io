@@ -48,6 +48,9 @@ a:hover {
       display: flex;
       align-items: center;
       gap: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .navbar li a {
